@@ -1,0 +1,90 @@
+
+.o-header {    
+    &--main {
+        margin-bottom: 120px;
+        
+        @media screen and ( max-width: 1280px ) {
+            margin-bottom: vw1280(120);
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            margin-bottom: vw768(120);
+        }
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            margin-bottom: vw480(120);
+        }
+    }
+    
+    &--secondary {
+        margin-bottom: 3em;
+    }
+
+    &__primary,
+    &__secondary,
+    &__fourth,
+    &__fifth,
+    &__fourth {
+        font-family: $sans-serif;
+    }
+    
+    &__primary {
+        line-height: 1.2em;
+        font: {
+            size: rem(100);
+            weight: $bold;
+        }
+        
+        @media screen and ( max-width: 1680px ) {
+            font-size: vw1680(100);
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            font-size: vw768(80);
+        }
+    }
+    
+    &__secondary,
+    &__third {
+        line-height: 1.25em;
+    }
+    
+    &__secondary {
+        @extend %font-size--secondary;
+    }
+    
+    &__third {
+        @extend %font-size--third;
+    }
+    
+    &__fourth {
+        @extend %font-size--fourth;
+    }
+    
+    &__fifth {
+        line-height: 1.2em;
+        font: {
+            size: rem(24);
+            weight: $bold;
+        }
+        
+        @media screen and ( min-width: 1281px ) and ( max-width: 1680px ) {
+            font-size: vw1680(24);
+        }
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1280px ) {
+            font-size: vw1280(24);
+        }
+        
+        @media screen and ( min-width: $smartphone + 1px ) and ( max-width: $tablet_portrait + px ) {
+            font-size: vw768(24);
+        }
+
+    }
+    
+    br {
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            display: none;
+        }
+    }
+}

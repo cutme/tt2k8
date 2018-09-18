@@ -1,0 +1,42 @@
+// Fonts
+
+$aleo:            'Aleo', serif;
+$montserrat:      'Montserrat', sans-serif;
+$icons:           'icomoon';
+
+
+// Default
+
+$serif:           $aleo;
+$sans-serif:      $montserrat;
+
+$text:            $serif;
+
+
+
+// Font weights
+
+$light:             300;
+$regular:           400;
+$bold:              700;
+
+
+$z-index: (
+    hamburger:      115,
+    topbar:         100
+);
+
+
+
+// Default
+
+$base-font-size:    20;
+$base:				1580;
+
+
+// RWD
+
+$tablet:				1024;
+$tablet_portrait:		768;
+$smartphone:			640;
+$smartphone_portrait:	480;

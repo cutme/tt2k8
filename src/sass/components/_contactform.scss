@@ -1,0 +1,28 @@
+.c-contactform {
+    margin-bottom: 100px;
+
+    @media screen and ( max-width: $tablet_portrait + px ) {
+        margin-bottom: vw768(100);
+    }
+    
+    @media screen and ( max-width: $smartphone + px ) {
+        margin-bottom: vw480(100);
+    }
+    
+    .o-btn {
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            width: 100%;
+            text-align: center;
+            
+            span {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
+
+

@@ -1,0 +1,85 @@
+.c-recommendations {
+    margin-bottom: 150px;
+    
+    @media screen and ( max-width: 1680px ) {
+        margin-bottom: vw1680(150);
+    }
+    
+    @media screen and ( max-width: 1280px ) {
+        margin-bottom: vw1280(150);
+    }
+    
+    @media screen and ( max-width: $tablet_portrait + px ) {
+        margin-bottom: vw768(150);
+        text-align: center;
+    }
+    
+    &__clients {
+        @extend %flex;
+        @extend %flex-wrap;
+        @extend %flex-space-between;
+        width: grid(680, 790);
+        margin: 0 auto;
+        
+        li {
+            width: 33%;
+            margin-bottom: 20px;
+            
+            &:nth-last-child(2),
+            &:nth-last-child(3),
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }        
+    }
+    
+    &__item {
+        width: 50vw;
+        margin-bottom: 40px;
+
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            width: 90vw;
+        }
+    }
+    
+    .o-cols {
+        &__item {
+            &--left {
+                .o-header, p {
+                    width: 500px;
+    
+                    @media screen and ( max-width: 1680px ) {
+                        width: grid(500, 790);
+                    }
+                    
+                    @media screen and ( max-width: 1280px ) {
+                        width: 90%;
+                    }
+                    
+                    @media screen and ( max-width: $tablet_portrait + px ) {
+                        width: 100%;
+                    }
+                }
+                
+                .o-more {
+                    cursor: pointer;
+                }
+                
+                @media screen and ( max-width: $tablet_portrait + px ) {
+                    margin-bottom: 100px;
+                }
+            }
+        }
+    }
+    
+    .o-underline {
+        &:after {
+            @media screen and ( max-width: $tablet_portrait + px ) {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    
+    
+}

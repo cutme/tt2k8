@@ -1,0 +1,77 @@
+.o-sticker {
+    @extend %abs;
+    mix-blend-mode: multiply;
+    
+    .u-blue &,
+    &.u-blue {
+        background-color: $c-blue1;
+    }
+    
+    .u-blue2 &,
+    &.u-blue2 {
+        background-color: $c-blue2;
+    }
+    
+    .u-green &,
+    &.u-green {
+        background-color: $c-green1;
+    }
+    
+    .u-orange &,
+    &.u-orange {
+        background-color: $c-orange1;
+    }
+    
+    .u-red &,
+    &.u-red {
+        background-color: $c-red1;
+    }
+    
+    .u-violet &,
+    &.u-violet {
+        background-color: $c-violet1;
+    }
+    
+    .u-yellow &,
+    &.u-yellow {
+        background-color: $c-yellow1;
+    }
+    
+    &--1g {
+        top: -20px; right: 100px;
+        width: 190px;  height: 380px;
+        
+        @media screen and ( max-width: 1680px ) {
+            top: vw1680(-20); right: vw1680(100);
+            width: vw1680(190); height: vw1680(380);
+        }
+        
+        @media screen and ( max-width: 1280px ) {
+            top: vw1280(-20); right: vw1280(100);
+            width: vw1280(190); height: vw1280(380);
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            top: vw768(-20); right: vw768(100);
+            width: vw768(190); height: vw768(380);
+        }
+    }
+    
+    
+    &.anim--down {
+        transform: scaleY(0);
+        transform-origin: bottom;
+    }
+    
+    &.anim--up {
+        transform: scaleY(0);
+        transform-origin: top;
+        transition-delay: .5s;
+    }
+    
+    &.anim--visible {
+        transform: scaleY(1);
+    }
+    
+}
+

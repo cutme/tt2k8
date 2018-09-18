@@ -1,0 +1,28 @@
+[class^="icon-"], [class*=" icon-"] {
+	@extend %icomoon;
+}
+
+.bg-gray {
+    background-color: $c-gray2;
+}
+
+.no-overflow {
+    overflow: hidden;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+.text-right {
+    text-align: right;
+}
+
+.text-upper {
+    text-transform: uppercase;
+}
+
+.u-margin {
+    margin-bottom: 200px;
+}

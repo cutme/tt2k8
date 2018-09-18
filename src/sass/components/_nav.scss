@@ -1,0 +1,92 @@
+.c-nav {
+    @extend %abs;
+    @extend %abs-y;
+    right: vw-1920(350);
+    transition: all .5s ease-out;
+    
+    @media screen and ( min-width: 1921px ) {
+        right: 350px;
+    }
+    
+    @media screen and ( max-width: 1280px ) {
+        display: none;
+    }
+    
+    ul {
+        @media screen and ( min-width: 1281px ) {
+            display: flex;
+            text-transform: lowercase;
+        }
+        
+        .mobile-nav & {
+            width: 100%;
+        }
+    }
+    
+    li {
+        padding: 0 25px;
+        
+        .mobile-nav & {
+            padding: 0;
+            border-bottom: 1px solid $c-gray7;
+        }
+    }
+    
+    a {
+        @extend %ulink;
+        font: {
+            family: $sans-serif;
+            size: rem(18);
+        }
+        color: $c-black2;
+        
+        .mobile-nav & {
+            display: block;
+            padding: 20px 0;
+            font: {
+                family: $serif;
+                size: rem(24);
+                weight: $bold;
+            }
+            
+            @media screen and ( max-width: $smartphone_portrait + px ) {
+                font-size: vw480(24);
+            }
+        }
+        
+        &:after, &:before {
+            background-color: $c-black2;
+            
+            .mobile-nav & {
+                bottom: -1px;
+                height: 1px;
+                
+                .mobile-nav & {
+                    //display: none;
+                }
+            }
+        }
+    }
+    
+    .mobile-nav & {
+        @extend %flex;
+        @extend %flex-y;
+        position: fixed;
+        right: 0; top: 0;
+        width: 400px; height: 100vh;
+        background-color: white;
+        padding: 50px;
+        transform: none;
+        transform: translate3d(100%, 0, 0);
+        
+        @media screen and ( max-width: 400px ) {
+            width: 90%;
+        }
+        
+    }
+    
+    &.is-visible {
+        transition-delay: .2s;
+        transform: translate3d(0, 0, 0);
+    }
+}

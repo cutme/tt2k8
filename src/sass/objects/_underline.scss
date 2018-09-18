@@ -1,0 +1,104 @@
+.o-underline {
+    @extend %rel;
+
+    &:after {
+        @extend %abs;
+        @extend %abs-after;
+        left: 0; bottom: 0;
+        width: 70px; height: 5px;
+        
+        @media screen and ( max-width: 1680px ) {
+            width: vw1680(70); height: vw1680(5);
+        }
+        
+        @media screen and ( max-width: 1280px ) {
+            width: vw1280(70); height: vw1280(5);
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            width: vw768(70); height: vw768(5);
+        }
+
+        .u-blue & {
+            background-color: $c-blue1;
+        }
+        
+        .u-blue2 & {
+            background-color: $c-blue2;
+        }
+        
+        .u-green & {
+            background-color: $c-green1;
+        }
+        
+        .u-orange & {
+            background-color: $c-orange1;
+        }
+        
+        .u-red & {
+            background-color: $c-red1;
+        }
+
+        .u-violet & {
+            background-color: $c-violet1;
+        }
+
+        .u-yellow & {
+            background-color: $c-yellow1;
+        }
+    }
+
+    &--further {
+        margin-bottom: 60px;
+        padding-bottom: 40px;
+    }
+    
+    &--closer {
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+    }
+
+
+
+    &--top {
+    
+        &:after {
+            display: none;
+        }
+        
+        article, h2, h3, h4, h5, h6 {
+            @extend %rel;
+            padding-top: 50px;
+
+            &:after {
+                @extend %abs;
+                @extend %abs-after;
+                left: 0; top: 0;
+                width: 110px; height: 5px;
+        
+                .u-blue & {
+                    background-color: $c-blue1;
+                }
+                
+                .u-orange & {
+                    background-color: $c-orange1;
+                }
+                
+                .u-red & {
+                    background-color: $c-red1;
+                }
+        
+                .u-violet & {
+                    background-color: $c-violet1;
+                }
+        
+                .u-yellow & {
+                    background-color: $c-yellow1;
+                }
+            }
+        }
+        
+    }
+}
+
+

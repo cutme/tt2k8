@@ -1,0 +1,15 @@
+.c-newsletter {
+    .o-btn {
+        height: 50px;
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            margin: 0 auto;
+        }
+    }
+    
+    .form-field {
+        @media screen and ( max-width: $smartphone + px ) {
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.o-btn {
+    @extend %anim;
+    @extend %rel;
+    display: inline-flex;
+    
+    &--black {
+        height: 60px;
+        border-radius: 4px;
+        background-color: $c-gray3;
+        box-shadow: rgba(#020302, .06) 0 0 18px;
+        padding: 0 40px;
+        font: {
+            family: $sans-serif;
+            size: rem(18);
+        }
+        color: white;
+        
+        &:hover {
+            box-shadow: rgba(#020302, .26) 0 0 38px;
+        }
+    }
+}

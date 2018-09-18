@@ -1,0 +1,53 @@
+.o-hamburger {
+    @include z-index(hamburger);
+    @extend %abs;
+    @extend %abs-y;
+    @extend %anim;
+    right: 40px;
+    width: 30px; height: 16px;
+    border-top: 4px solid $c-black1;
+    cursor: pointer;
+
+    @media screen and ( min-width: 1281px ) {
+        display: none;
+    }
+    
+    @media screen and ( max-width: $tablet + px ) {
+        right: 25px;
+    }
+    
+    @media screen and ( max-width: $smartphone + px ) {
+        right: 15px;
+    }
+
+    &:after, &:before {
+        @extend %abs;
+        @extend %abs-after;
+        @extend %anim;
+        width: 100%; 
+        height: 4px;
+        background-color: $c-black1;        
+    }
+    
+    &:after {
+        transform-origin: right;
+        top: 100%;
+    }
+    
+    &:before {
+        transform-origin: left;
+        top: calc(50% - 2px);
+    }
+    
+    &.is-active {
+        border-color: transparent !important;
+
+        &:after {
+            transform: rotate(45deg) translate(-2px, 2px);
+        }
+        
+        &:before {
+            transform: rotate(-45deg) translate(-2px, 10px);            
+        }
+    }
+}

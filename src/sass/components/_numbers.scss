@@ -1,0 +1,124 @@
+.c-numbers {
+    @extend %flex;
+    
+    @media screen and ( max-width: $tablet_portrait + px ) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }    
+    
+    &__item {
+        width: 316px;
+        text-align: center;
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            width: 33%;
+            margin-bottom: 80px;
+            justify-content: center;
+        }
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            width: 50%;
+        }
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            width: 100%;
+            
+            &:last-of-type {
+                margin: 0;
+            }
+        }
+    }
+    
+    &__lead {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+    }
+    
+    &__num {
+        font: {
+            family: $sans-serif;
+            size: rem(48);
+            weight: $light;
+        }
+        
+        @media screen and ( min-width: 1281px ) and ( max-width: 1680px ) {
+            font-size: vw1680(48);
+        }
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1280px ) {
+            font-size: vw1280(48);
+        }
+        
+        @media screen and ( min-width: $smartphone + 1px ) and ( max-width: $tablet_portrait + px ) {
+            font-size: vw768(48);
+        }
+
+
+        &:after {
+            width: 100px;
+        }
+    }
+    
+    i {
+        display: block;
+        margin-bottom: 40px;
+        font-size: rem(72);
+        
+        @media screen and ( min-width: 1281px ) and ( max-width: 1680px ) {
+            font-size: vw1680(72);
+        }
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1280px ) {
+            font-size: vw1280(72);
+        }
+        
+        @media screen and ( min-width: $smartphone + 1px ) and ( max-width: $tablet_portrait + px ) {
+            font-size: vw768(72);
+        }  
+    }
+    
+    p {
+        line-height: 1.5em;
+        font-size: rem(22);
+        
+        @media screen and ( min-width: 1281px ) and ( max-width: 1680px ) {
+            font-size: vw1680(22);
+        }
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1280px ) {
+            font-size: vw1280(22);
+        }
+        
+        @media screen and ( min-width: $smartphone + 1px ) and  ( max-width: $tablet_portrait + px ) {
+            font-size: vw768(22);
+        }
+    }
+    
+    .o-header {
+        margin-bottom: 7em;
+    }
+
+    .o-underline {
+        &:after {
+            @extend %abs-x;
+            width: 100px;
+        }
+
+        &.anim {
+            &:after {
+                transition: all 1500ms cubic-bezier(.785, .135, .15, .86);
+                opacity: 0;
+                transform: scale3d(0, 1, 1) translateX(-50%);
+                transform-origin: left;
+            }
+        }
+
+        &.anim--visible {
+            &:after {
+                opacity: 1;
+                transform: scale3d(1, 1, 1) translateX(-50%);
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,231 @@
+button, input, textarea {
+	background-color: transparent;
+	border: none;
+	border-color: inherit;
+	border-radius: 0;
+	font-family: $text;
+	color: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+input, textarea {
+	width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+	text-rendering: optimizeLegibility; 
+	
+	font: {
+	    size: rem($base-font-size);
+		family: $text;
+	}
+	cursor: text;
+	color: inherit;
+}
+
+input {
+	&[disabled],
+	&[readonly] {
+		opacity: .5;
+	}
+}
+
+input {
+	&[type=text],
+	&[type=email],
+	&[type=tel] {
+		width: 100%;
+	}
+}
+
+textarea {
+
+	resize: none;
+	overflow: auto;
+}
+
+:invalid {
+  box-shadow: none;
+}
+
+:-moz-submit-invalid {
+  box-shadow: none;
+}
+
+:-moz-ui-invalid {
+  box-shadow:none;
+}
+
+::-webkit-input-placeholder {color: inherit;}
+:-moz-placeholder {color: inherit; }
+::-moz-placeholder {color: inherit; }
+:-ms-input-placeholder { color: inherit; }
+
+input[type=checkbox]:not(old) {
+	display: none;
+}
+
+
+/*
+
+input[type=checkbox] {
+    display: none;
+    
+    & + label {
+        @extend %flex;
+        @extend %flex-y;
+        cursor: pointer;
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            align-items: flex-start;
+        }
+
+        i {
+            @extend %rel;
+            flex-shrink: 0;
+            height: 25px;
+            width: 25px;
+            background-color: transparent;
+            display: inline-block;
+            border: 1px solid white;
+            cursor: pointer;
+            
+            &:after {
+                @extend %abs;
+                @extend %abs-after;
+                left: 3px; top: -5px;
+                font-size: rem(24);
+                content: '✓';
+                opacity: 0;
+                color: red;
+            }
+        }
+
+        span {
+            padding-left: 15px;
+            font-size: rem(20);
+            color: white;
+        }
+    }
+    
+    &:checked {
+        & + label {
+            i {
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+*/
+
+
+.form-field {
+    @extend %anim;
+    height: 60px;
+    background-color: white;
+    border: 1px solid $c-black1;
+    padding: 0 20px;
+    font: {
+        family: $sans-serif;
+        size: rem(20);    
+    }
+    
+    @media screen and ( max-width: $tablet_portrait + px ) {
+        height: vw768(60);
+    }
+    
+    @media screen and ( max-width: $smartphone_portrait + px ) {
+        height: vw480(60);
+        font-size: vw480(20);    
+    }
+    
+    &--small {
+        height: 50px;
+    }
+    
+    &:focus {
+        box-shadow: rgba(#020302, .06) 0 0 38px;
+    }
+}
+
+textarea.form-field {
+    height: 330px;
+    padding: 20px;
+    
+    @media screen and ( max-width: $tablet_portrait + px ) {
+        height: vw768(330);
+    }
+    
+    @media screen and ( max-width: $smartphone_portrait + px ) {
+        height: vw480(330);
+    }
+}
+
+.form-row {
+    @extend %flex;
+    margin-bottom: 30px;
+    
+    @media screen and ( max-width: $smartphone + px ) {
+        flex-wrap: wrap;
+    }
+    
+    &.has-error {
+        label {
+            span {
+                color: $c-red1;
+            }
+        }
+    }
+    
+    .form-group {
+        &:nth-of-type(2) {
+        
+            @media screen and ( min-width: $smartphone + 1px ) {
+                margin: 0 40px;
+            }
+        }
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            width: 100%;
+
+            &:not(:last-of-type) {
+                margin-bottom: 25px;
+            }
+        }
+    }
+    
+    &--submit {
+        padding-top: 20px;
+    }
+}
+
+.form-group {
+
+    @media screen and ( min-width: $smartphone + 1px ) {
+        flex: 1;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        font: {
+            family: $sans-serif;
+            size: rem(18);
+            weight: $bold;
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            font-size: vw768(18);
+        }
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            font-size: vw480(18);
+        }
+
+    }
+}

@@ -1,0 +1,96 @@
+.c-people {
+    @extend %flex;
+    @extend %flex-x;
+    @extend %flex-wrap;
+    
+    &__item {
+        max-width: 303px;
+        margin: 0 46px 100px 46px;
+        text-align: center;
+        
+        @media screen and ( max-width: 1680px ) {
+            width: grid(303);
+            margin: 0 grid(46) vw1680(100) grid(46);
+        }
+        
+        @media screen and ( min-width: $smartphone + 1px ) and ( max-width: $tablet + px ) {
+            width: 33.3%;
+            margin: 0 0 vw1280(100) 0;
+            padding: 0 10px;
+        }
+        
+        @media screen and ( min-width: $smartphone_portrait + 1px ) and ( max-width: $smartphone + px ) {
+            width: 50%;
+            margin: 0;
+            padding: 0 10px;
+        }
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            width: 100%;
+            margin: 0 0 20px 0;
+        }
+
+        @media screen and ( min-width: $tablet + 1px ) {
+            
+            &:nth-child(4n + 2) {
+                transition-delay: 200ms;
+            }
+            
+            &:nth-child(4n + 3) {
+               transition-delay: 400ms;
+            }
+            
+            &:nth-child(4n + 4) {
+                transition-delay: 600ms;
+            }
+        }
+        
+        @media screen and ( min-width: $smartphone + 1px ) and ( max-width: $tablet + px ) {
+            
+            &:nth-child(3n + 2) {
+                transition-delay: 200ms;
+            }
+            
+            &:nth-child(3n + 3) {
+                transition-delay: 400ms;
+            }
+        }
+    }
+    
+    img {
+        margin-bottom: 25px;
+    }
+    
+    .o-underline {
+        margin-bottom: 20px;
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1680px ) {
+            margin-bottom: vw1680(20);
+        }
+        
+        @media screen and ( min-width: $smartphone_portrait + 1px ) and ( max-width: $tablet_portrait + px ) {
+            margin-bottom: vw768(20);
+        }
+
+        &:after {
+            @extend %abs-x;
+        }
+    }
+    
+    p {
+        font-size: rem(18);
+        color: $c-gray1;
+        
+        @media screen and ( min-width: 1281px ) and ( max-width: 1680px ) {
+            font-size: vw1680(18);
+        }
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1280px ) {
+            font-size: vw1280(18);
+        }
+        
+        @media screen and ( min-width: $smartphone_portrait + 1px ) and ( max-width: $tablet_portrait + px ) {
+            font-size: vw768(18);
+        }
+    }
+}

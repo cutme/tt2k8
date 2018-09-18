@@ -1,0 +1,30 @@
+.o-container {
+    @extend %rel;
+    overflow: hidden;
+    padding-top: 130px;
+    
+    @media screen and ( max-width: $tablet + px ) {
+        padding-top: 90px;
+    }
+    
+    @media screen and ( max-width: $smartphone_portrait + px ) {
+        padding-top: 70px;
+    }
+
+    &:after {
+        @extend %abs;
+        @extend %abs-after;
+        @extend %anim;
+        left: 0; top: 0;
+        width: 100%; height: 100%;
+        background-color: rgba($c-black1, .7);
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+        
+        .mobile-nav & {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}
+

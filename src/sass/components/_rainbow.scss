@@ -1,0 +1,42 @@
+.c-rainbow {
+    @extend %rel;
+    
+    &__colors {
+        @extend  %abs;
+        @extend  %abs-y;
+        left: 0;
+        z-index: -1;
+        width: 10000px;
+        height: 230px;
+        background-color: white;
+        transform: translate3d(-50%, -50%, 0);
+        border-bottom: 50px solid $c-yellow1;
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            height: vw768(230);
+        }
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            height: vw480(230);
+        }
+    
+        &:after,    
+        &:before {
+            @extend %abs;
+            @extend %abs-after;
+            left: 0; 
+            width: 100%;
+            height: 50px;
+        }
+        
+        &:before {
+            top: 0;
+            background-color: $c-blue1;
+        }
+        
+        &:after {
+            top: 50px;
+            background-color: $c-red1;
+        }
+    }
+}

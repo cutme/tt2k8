@@ -1,0 +1,135 @@
+.c-postcarousel {
+    @extend %rel;
+    
+    color: white;
+    
+    @media screen and ( min-width: $tablet_portrait + 1px ) {
+        margin-bottom: -70px;
+    }
+    
+    
+
+    .o-wrap {
+        @extend %rel;
+    }
+
+    &__info {
+        background-color: rgba($c-green2, .62);
+        padding: 75px 85px;
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) {
+            position: absolute; z-index: 10;
+            top: 0;
+            width: 630px; height: 100%;
+        }
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1680px ) {
+            left: 50px;
+            width: vw1680(630);
+        }
+        
+        @media screen and ( max-width: 1680px ) {
+            padding: vw1680(75) vw1680(85);
+        }
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: $tablet + px ) {
+            left: 25px;
+        }
+        
+        
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            left: 15px;
+        }
+    }
+    
+    &__item {
+        @media screen and ( min-width: $tablet_portrait + 1px ) {
+            width: 30vw;
+        }
+    }
+    
+    &__lead {        
+        line-height: 1.2em;
+        font: {
+            family: $sans-serif;
+            size: rem(60);
+            weight: $bold;
+        }
+        
+        @media screen and ( min-width: 1681px + px ) {
+            max-height: 300px;
+            overflow: hidden;
+        }
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1680px ) {
+            max-height: vw1680(300);
+        }
+        
+        @media screen and ( max-width: 1680px ) {
+            font-size: vw1680(60);
+        }        
+    }
+    
+    &__nav {
+
+        @media screen and ( min-width: $tablet_portrait + 1px ) {
+            position: absolute;
+            left: 85px; bottom: 75px;
+        }
+        
+        @media screen and ( max-width: 1680px ) {
+            left: vw1680(85);
+            bottom: vw1680(75);
+        }
+        
+        
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            padding-top: 20px;
+        }
+        
+        [class^="icon-"] {
+            @extend %anim;
+            display: inline-block;
+            transition-duration: 150ms;
+            font-size: rem(40);
+            cursor: pointer;
+            
+            @media screen and ( max-width: 1680px ) {
+                font-size: vw1680(40);
+            }
+            /*
+
+            @media screen and ( max-width: 1280px ) {
+                font-size: vw1280(40);
+            }
+            
+            @media screen and ( max-width: $tablet_portrait + px ) {
+                font-size: vw768(40);
+            }
+*/
+            
+        }
+        
+        .icon-arrow-left {
+            margin-right: 20px;
+            
+            &:hover {
+                transform: translate3d(-5px, 0, 0);
+            }
+        }
+        
+        .icon-arrow-right1 {
+            
+            &:hover {
+                transform: translate3d(5px, 0, 0);
+            }
+        }
+    }
+    
+    &__images {
+        @extend %rel;
+        z-index: 4;
+    }
+}

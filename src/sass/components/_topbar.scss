@@ -1,0 +1,31 @@
+.c-topbar {
+    @include z-index(topbar);
+    @extend %flex;
+    @extend %flex-y;
+    @extend %rel;
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%;
+    height: 130px;
+    background-color: white;
+    border-bottom: 1px solid transparent;
+    
+    @media screen and ( max-width: $tablet + px ) {
+        height: 90px;
+    }
+    
+    @media screen and ( max-width: $smartphone_portrait + px ) {
+        height: 70px;
+    }
+    
+    .o-wrap {
+        @media screen and ( max-width: 1740px ) {
+            position: relative;
+        }
+    }
+    
+    &.border {
+        border-bottom-color: $c-gray7;
+    }
+    
+}

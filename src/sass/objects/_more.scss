@@ -1,0 +1,79 @@
+.o-more {
+    font: {
+        family: $sans-serif;
+        size: rem(18);
+    }
+    
+    @media screen and ( min-width: 1281px ) and ( max-width: 1680px ) {
+        font-size: vw1680(18);
+    }
+    
+    @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1280px ) {
+        font-size: vw1280(18);
+    }
+    
+    @media screen and ( min-width: $smartphone_portrait + 1px ) and ( max-width: $tablet_portrait + px ) {
+        font-size: vw768(18);
+    }
+    
+    span {
+        @extend %ulink;
+        
+        &:before, &:after {
+            .u-blue & {
+                background-color: $c-blue1;
+            }
+            
+            .u-red & {
+                background-color: $c-red1;
+            }
+        
+            .u-violet & {
+                background-color: $c-violet1;
+            }
+        
+            .u-yellow & {
+                background-color: $c-yellow1;
+            }
+        }
+    }
+    
+    &:after {
+        @extend %icomoon;
+        @extend %anim;
+        display: inline-block;
+        margin-left: 8px;
+        color: $c-black1;
+        content: "\e90c";
+    }
+    
+    &:hover {
+        &:after {
+            transform: translate3d(5px,0,0);
+        }
+    }
+    
+    &--margin {
+        display: block;
+
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            margin-bottom: 60px;
+        }
+    }
+
+    .u-blue & {
+        color: $c-blue1;
+    }
+    
+    .u-red & {
+        color: $c-red1;
+    }
+
+    .u-violet & {
+        color: $c-violet1;
+    }
+
+    .u-yellow & {
+        color: $c-yellow1;
+    }
+}

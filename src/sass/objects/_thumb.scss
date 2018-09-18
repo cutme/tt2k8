@@ -1,0 +1,30 @@
+.o-thumb {
+    @extend %rel;
+    display: block;
+    
+    
+    img {
+        @extend %anim;
+        @extend %rel;
+        transition-duration: 1s;
+    }
+    
+    &__img {
+        @extend %rel;
+        display: block;
+    }
+    
+    a.o-thumb__img {
+        
+        overflow: hidden;
+        
+        &:hover {
+           img {
+               transform: scale3d(1.1,1.1,1);
+           } 
+        }
+    }
+    
+    
+}
+

@@ -1,0 +1,318 @@
+.c-top {
+    
+    @media screen and ( max-width: $tablet_portrait + px ) {
+        text-align: center;
+    }
+
+    .o-cols {
+        @extend %flex-y;
+        
+        &__item {
+            padding-top: 20px;
+
+            &--left {
+                @media screen and ( max-width: $tablet_portrait + px ) {
+                    margin-bottom: 60px;
+                }
+            }
+            
+            &--right {
+                @media screen and ( max-width: $tablet_portrait + px ) {
+                    
+                }
+            }
+        }
+    }
+    
+    .o-header {
+        
+        &__primary,
+        &__secondary {
+            margin-bottom: .7em; 
+            line-height: 1.1em;
+        }
+
+        &__third {
+            color: $c-gray1;
+        }
+    }
+    
+    .o-thumb {
+        margin: 0 0 0 auto;
+
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            margin: 0 auto;
+        }
+    }
+    
+    &--about,
+    &--blog,
+    &--home,
+    &--seo {
+        margin-bottom: 100px;    
+    
+        @media screen and ( max-width: 1680px ) {
+            margin-bottom: vw1680(100);
+        }
+        
+        @media screen and ( max-width: 1280px ) {
+            margin-bottom: vw1280(100);
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            margin-bottom: vw768(100);
+        }
+    }
+    
+    &--about {
+        .o-thumb {
+            max-width: 504px;
+
+            @media screen and ( min-width: $tablet_portrait + 1px ) {
+                margin: 0 0 0 auto;
+            }
+        }
+    }
+    
+    &--blog {
+        @extend %rel;
+        background-color: $c-gray2;
+        padding: 135px 0 200px 0;
+        
+        @media screen and ( max-width: 1680px ) {
+            padding: vw1680(135) 0 vw1680(200) 0;
+        }
+        
+        @media screen and ( max-width: 1280px ) {
+            padding: vw1280(135) 0 vw1280(200) 0;
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            padding: vw768(135) 0 vw768(200) 0;
+        }
+        
+        &:after {
+            @extend %abs;
+            @extend %abs-after;
+            left: 0; bottom: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 50px 0 0 100vw;
+            border-color: transparent transparent transparent white;
+            
+            @media screen and ( max-width: 1680px ) {
+                border-width: vw1680(50) 0 0 100vw;
+            }
+        }
+        
+        .o-thumb {
+            max-width: 528px;
+        }
+        
+        .o-sticker {
+            &--1, &--2 {
+                z-index: -1;
+            }
+    
+            &--1 {
+                left: 210px; bottom: 70px;
+                width: 340px; height: 130px;
+                
+                @media screen and ( max-width: 1680px ) {
+                    left: vw1680(-20); bottom: vw1680(70);
+                    width: vw1680(340); height: vw1680(130);
+                }
+                
+                @media screen and ( max-width: 1280px ) {
+                    left: vw1280(-20); bottom: vw1280(70);
+                    width: vw1280(340); height: vw1280(130);
+                }
+                
+                @media screen and ( max-width: $tablet_portrait + px ) {
+                    left: vw768(-20); bottom: vw768(70);
+                    width: vw768(340); height: vw768(130);
+                }
+            }
+            
+            &--2,
+            &--3 {
+                top: 80px;
+                width: 340px; height: 265px;
+                
+                @media screen and ( max-width: 1680px ) {
+                    top: vw1680(80);
+                    width: vw1680(340); height: vw1680(265);
+                }
+                
+                @media screen and ( max-width: 1280px ) {
+                    top: vw1280(80);
+                    width: vw1280(340); height: vw1280(265);
+                }
+                
+                @media screen and ( max-width: $tablet_portrait + px ) {
+                    top: vw768(80);
+                    width: vw768(340); height: vw768(265);
+                }
+            }
+            
+            &--2 {
+                right: -30px;
+                
+                @media screen and ( max-width: 1680px ) {
+                    right: vw1680(-30);
+                }
+                
+                @media screen and ( max-width: 1280px ) {
+                    right: vw1280(-30);
+                }
+                
+                @media screen and ( max-width: $tablet_portrait + px ) {
+                    right: vw768(-30);
+                }
+            }
+            
+            &--3 {
+                right: -20px;
+                
+                @media screen and ( max-width: 1680px ) {
+                    right: vw1680(-20);
+                }
+                
+                @media screen and ( max-width: 1280px ) {
+                    right: vw1280(-20);
+                }
+                
+                @media screen and ( max-width: $tablet_portrait + px ) {
+                    right: vw768(-20);
+                }
+            }
+        }       
+    }
+    
+    &--case {    
+        padding: 100px 0 200px 0;
+        
+        @media screen and ( max-width: 1680px ) {
+            padding: vw1680(100) 0 vw1680(200) 0;
+        }
+        
+        @media screen and ( max-width: 1280px ) {
+            padding: vw1280(100) 0 vw1280(200) 0;
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            padding: vw768(100) 0 vw768(200) 0;
+        }
+        
+        .o-thumb {
+            max-width: 528px;
+        }
+
+            
+        .o-header {
+            &__primary {
+                line-height: 1em;
+            }
+        }
+        
+        .o-sticker {
+            &--1, &--2 {
+                z-index: -1;
+            }
+            
+            &--1 {
+                left: 70px; top: -20px;
+                width: 130px; height: 340px;
+                
+                @media screen and ( max-width: 1680px ) {
+                    left: vw1680(70); top: vw1680(-20);
+                    width: vw1680(130); height: vw1680(340);
+                }
+                
+                @media screen and ( max-width: 1280px ) {
+                    left: vw1280(70); top: vw1280(-20);
+                    width: vw1280(130); height: vw1280(340);
+                }
+                
+                @media screen and ( max-width: $tablet_portrait + px ) {
+                    left: vw768(70); top: vw768(-20);
+                    width: vw768(130); height: vw768(340);
+                }
+            }
+            
+            &--2,
+            &--3 {
+                right: 80px;
+                width: 265px; height: 340px;
+                
+                @media screen and ( max-width: 1680px ) {
+                    right: vw1680(80);
+                    width: vw1680(265); height: vw1680(340);
+                }
+                
+                @media screen and ( max-width: 1280px ) {
+                    right: vw1280(80);
+                    width: vw1280(265); height: vw1280(340);
+                }
+                
+                @media screen and ( max-width: $tablet_portrait + px ) {
+                    right: vw768(80);
+                    width: vw768(265); height: vw768(340);
+                }
+            }
+            
+            &--2 {
+                bottom: -30px;
+                
+                @media screen and ( max-width: 1680px ) {
+                    bottom: vw1680(-30);
+                }
+                
+                @media screen and ( max-width: 1280px ) {
+                    bottom: vw1280(-30);
+                }
+                
+                @media screen and ( max-width: $tablet_portrait + px ) {
+                    bottom: vw768(-30);
+                }
+            }
+            
+            &--3 {
+                bottom: -20px;
+                
+                @media screen and ( max-width: 1680px ) {
+                    bottom: vw1680(-20);
+                }
+                
+                @media screen and ( max-width: 1280px ) {
+                    bottom: vw1280(-20);
+                }
+                
+                @media screen and ( max-width: $tablet_portrait + px ) {
+                    bottom: vw768(-20);
+                }
+            }
+        }
+    }
+    
+    &--home {
+        padding: 30px 0 0 0;
+
+/*
+
+        .o-header {
+            &__primary {
+                line-height: 1em;
+            }
+        }
+*/
+    }
+    
+    
+    &--seo {
+        .o-thumb {
+            max-width: 540px;
+        }
+    }
+}

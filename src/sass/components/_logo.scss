@@ -1,0 +1,15 @@
+.c-logo {
+    @extend %abs;
+    @extend %abs-y;
+    z-index: 15;
+    display: block;
+    width: 276px;
+    
+    @media screen and ( min-width: 1741px ) {
+        left: 80px;
+    }
+    
+    @media screen and ( max-width: $smartphone_portrait + px ) {
+        width: vw480(276);
+    }
+}

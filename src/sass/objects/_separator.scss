@@ -1,0 +1,17 @@
+.o-separator {
+    @extend %rel;
+    height: 100%;
+
+    &:before {
+        @extend %abs;
+        @extend %abs-after;
+        
+        right: 0; top: 0;
+        width: 1px; height: 100%;
+        background-color: $c-black1;
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            display: none;
+        }
+    }
+}

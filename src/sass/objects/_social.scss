@@ -1,0 +1,25 @@
+.o-social {
+    @extend %flex;
+    
+    @media screen and ( max-width: $smartphone + px ) {
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+    
+    li {
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
+    }
+
+    [class^="icon-"] {
+        display: inline-block;
+        transition-duration: 250ms;
+        color: $c-gray4;
+        
+        &:hover {
+            transform: translate3d(0, -5px, 0);
+            color: $c-black1;
+        }
+    }
+}

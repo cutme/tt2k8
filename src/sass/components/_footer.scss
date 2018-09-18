@@ -1,0 +1,84 @@
+.c-footer {
+    margin-bottom: 100px;
+    
+    @media screen and ( max-width: $smartphone_portrait + px ) {
+        margin-bottom: vw480(100);
+    }
+    
+    &__address {
+        font: {
+            family: $sans-serif;
+            size: rem(24);
+        }
+        
+        @media screen and ( min-width: 1281px ) and ( max-width: 1680px ) {
+            font-size: vw1680(24);
+        }
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1280px ) {
+            font-size: vw1280(24);
+        }
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            font-size: vw480(24);
+        }
+
+        a {
+            @extend %ulink;
+            color: $c-gray5;
+            
+            &:after, &:before {
+                background-color: $c-gray5;
+            }
+        }
+        
+        p {
+            line-height: 1.8em;
+        }
+    }
+
+    &__lead {
+        margin-bottom: 35px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid $c-black1;
+        
+        img {
+            @media screen and ( max-width: $smartphone + px ) {
+                margin: 0 auto;
+            }
+        }
+    }
+    
+    .o-social {
+        [class^="icon-"] {
+            font-size: rem(28);
+        }
+    }
+    
+    .o-cols {
+        &__item {
+            width: calc(100% / 3);
+            
+            &:nth-of-type(1),
+            &:nth-of-type(2) {
+                @media screen and ( max-width: $tablet_portrait + px ) {
+                    flex: 1;
+                }
+                
+                @media screen and ( max-width: $smartphone + px ) {
+                    width: 100%;
+                    flex: none;
+                    text-align: center;
+                }
+                
+            }
+            
+            &:nth-of-type(3) {
+                @media screen and ( max-width: $tablet_portrait + px ) {
+                    width: 100%;
+                    padding-top: 40px;
+                }
+            }
+        }
+    }
+}

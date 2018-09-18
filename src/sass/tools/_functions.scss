@@ -1,0 +1,70 @@
+@function em( $target, $context: $base-font-size ) {
+    @return ( $target / $context ) * 1em;
+}
+
+@function rem( $target, $context: $base-font-size ) {
+	@return ( $target / 16 ) * 1rem;
+}
+
+@function get-vw-base($target) {
+	$vw-context: (($base) * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function vw-1920($target) {
+	$vw-context: ((1920) * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function vw1680($target) {
+	$vw-context: ((1680) * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function vw1280($target) {
+	$vw-context: ((1280) * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function vw768($target) {
+	$vw-context: ((768) * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function vw480($target) {
+	$vw-context: ((480) * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function get-vw-tablet($target) {
+	$vw-context: (($tablet) * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function get-vw-tablet-portrait($target) {
+	$vw-context: (($tablet_portrait) * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function get-vw-smartphone($target) {
+	$vw-context: (($smartphone) * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function get-vw-smartphone-portrait($target) {
+	$vw-context: (($smartphone_portrait) * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function grid( $width, $context: $base ) {
+    @return percentage( $width / $context );
+}
+
+@function z-index($key) {
+  @return map-get($z-index, $key);
+}
+
+@mixin z-index($key) {
+  z-index: z-index($key);
+}
+
