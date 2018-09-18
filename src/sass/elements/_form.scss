@@ -185,7 +185,7 @@ textarea.form-field {
         &:nth-of-type(2) {
         
             @media screen and ( min-width: $smartphone + 1px ) {
-                margin: 0 40px;
+                margin: 0 grid(40);
             }
         }
         
