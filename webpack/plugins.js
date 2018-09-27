@@ -45,7 +45,7 @@ const js = new HappyPack({
 });
 
 const MiniCssExtractPlugin = new _MiniCssExtractPlugin({
-    filename: "style.css",
+    filename: "css/style.css",
     chunkFilename: "[name].css"
 });
 

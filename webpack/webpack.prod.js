@@ -117,7 +117,8 @@ module.exports = {
 		
 
         
-        new HtmlCriticalPlugin({
+       /*
+ new HtmlCriticalPlugin({
             base: path.resolve(__dirname, '../dist'),
             src: 'index.html',
             dest: 'index.html',
@@ -131,6 +132,7 @@ module.exports = {
             }
         })
 
+*/
 
 	],
 	
