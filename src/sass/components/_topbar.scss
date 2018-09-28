@@ -1,5 +1,6 @@
 .c-topbar {
     @include z-index(topbar);
+    @extend %anim;
     @extend %flex;
     @extend %flex-y;
     @extend %rel;
@@ -25,7 +26,16 @@
     }
     
     &.border {
+        height: 70px;
         border-bottom-color: $c-gray7;
+        
+        a {
+            font-size: 80%;
+        }
+        
+        .c-logo {
+            width: 206px;
+        }
     }
     
 }

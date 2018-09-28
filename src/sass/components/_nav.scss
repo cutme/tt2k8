@@ -1,22 +1,30 @@
 .c-nav {
-    @extend %abs;
-    @extend %abs-y;
-    right: vw-1920(350);
-    transition: all .5s ease-out;
     
-    @media screen and ( min-width: 1921px ) {
-        right: 350px;
-    }
+
     
     @media screen and ( max-width: 1280px ) {
         display: none;
+        
+        position: absolute;
+        top: 50%; transform: translateY(-50%);
+        right: vw-1920(350);
+        transition: all .5s ease-out;
     }
     
     ul {
         @media screen and ( min-width: 1281px ) {
             display: flex;
             text-transform: lowercase;
+            
+            position: absolute;
+            top: 50%; 
+            right: 350px;
+            transform: translateY(-50%);
+            
+            transition: all .5s ease-out;
+            
         }
+
         
         .mobile-nav & {
             width: 100%;
@@ -29,16 +37,19 @@
         .mobile-nav & {
             padding: 0;
             border-bottom: 1px solid $c-gray7;
+            transform: translateY(-50%);
         }
     }
     
     a {
-        @extend %ulink;
-        font: {
-            family: $sans-serif;
-            size: rem(18);
+        &:not(.o-btn) {
+            @extend %ulink;
+            font: {
+                family: $sans-serif;
+                size: rem(18);
+            }
+            color: $c-black2;
         }
-        color: $c-black2;
         
         .mobile-nav & {
             display: block;
@@ -68,6 +79,18 @@
         }
     }
     
+    &__btn {
+        @media screen and ( min-width: 1281px ) {
+            position: absolute;
+            right: 50px; top: 50%;
+            transform: translateY(-50%); 
+        }
+        
+        @media screen and ( max-width: 1280px ) {
+            display: none;
+        }
+    }
+    
     .mobile-nav & {
         @extend %flex;
         @extend %flex-y;
@@ -83,6 +106,10 @@
             width: 90%;
         }
         
+    }
+    
+    .o-btn {
+        padding: 0 20px 3px 20px;
     }
     
     &.is-visible {
